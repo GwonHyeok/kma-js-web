@@ -2,15 +2,14 @@
  * Created by GwonHyeok on 2016. 8. 2..
  */
 
+// 기본적으로 서울의 데이터를 보여준다
+getSeoulWeather();
 
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, function (error) {
             getSeoulWeather();
         });
-    } else {
-        // GPS 정보를 사용할 수 없다면 서울 정보로 보여준다
-        getSeoulWeather();
     }
 }
 
