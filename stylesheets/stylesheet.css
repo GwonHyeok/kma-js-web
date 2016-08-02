@@ -421,3 +421,8 @@ p.weather-panel-title {
 .weather-category {
     font-size: 28px;
 }
+
+.row {
+     margin-right: 0!important;
+     margin-left: 0!important;
+}
