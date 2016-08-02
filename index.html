@@ -186,6 +186,110 @@
 
     </div>
 
+    <div class="container" style="padding: 16px !important;">
+        <article class="markdown-body entry-content" itemprop="text">
+            <h1><a id="user-content-korea-meteorological-administration" class="anchor"
+                   href="#korea-meteorological-administration" aria-hidden="true">
+                <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16"
+                     width="16">
+                    <path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                </svg>
+            </a><strong>kma-js</strong></h1>
+
+            <h2><a id="user-content-소개" class="anchor" href="#소개" aria-hidden="true">
+                <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16"
+                     width="16">
+                    <path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                </svg>
+            </a>소개
+            </h2>
+
+            <p>구글 GeoLocation API와 KMA의 날씨 정보(RSS)를 이용하여 날씨 정보를 받아오는 라이브러리 입니다.</p>
+
+            <p>KMA에서 날씨정보를 얻어오기 위해서는 bcode (지역코드)를 필요로 하지만
+                해당 라이브러리를 이용하면 좌표를 이용해서 해당 지역의 날씨 정보를 받아 올 수 있습니다.</p>
+
+            <p>해당 라이브러리의 작동 방식은 다음과 같습니다.</p>
+
+            <ol>
+                <li>유저가 좌표를 이용해서 날씨 정보를 요청.</li>
+                <li>Google Maps GeoLocation API 를 이용하여 좌표를 주소로 변환.</li>
+                <li>KMA에 있는 bcode &lt;-&gt; 좌표 매치 데이터를 이용하여 bcode 를 얻어옴.</li>
+                <li>bcode를 이용하여 KMA에 현재 날씨 정보를 받아옴.</li>
+            </ol>
+
+            <h2><a id="user-content-라이브러리-사용-조건" class="anchor" href="#라이브러리-사용-조건" aria-hidden="true">
+                <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16"
+                     width="16">
+                    <path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                </svg>
+            </a>라이브러리 사용 조건
+            </h2>
+
+            <ul>
+                <li>ES6</li>
+                <li>Promise</li>
+                <li>Node.js</li>
+            </ul>
+
+            <h2><a id="user-content-빠른-시작" class="anchor" href="#빠른-시작" aria-hidden="true">
+                <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16"
+                     width="16">
+                    <path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                </svg>
+            </a>빠른 시작
+            </h2>
+
+            <p>설치 방법</p>
+
+            <div class="highlight highlight-source-js">
+                <pre>npm install kma<span class="pl-k">-</span>js</pre>
+            </div>
+
+            <p>좌표로 날씨 정보 가져오기</p>
+
+            <div class="highlight highlight-source-js"><pre><span class="pl-k">let</span> kmaWeather <span class="pl-k">=</span> <span
+                    class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>kma-js<span
+                    class="pl-pds">'</span></span>).<span class="pl-smi">Weather</span>;
+<span class="pl-smi">kmaWeather</span>.<span class="pl-en">townWeather</span>(<span class="pl-s"><span
+                        class="pl-pds">'</span>37.49543016888596<span class="pl-pds">'</span></span>, <span
+                        class="pl-s"><span class="pl-pds">'</span>127.03781811461468<span class="pl-pds">'</span></span>)
+    .<span class="pl-en">then</span>(<span class="pl-smi">data</span> <span class="pl-k">=&gt;</span> <span
+                        class="pl-en">console</span>.<span class="pl-c1">log</span>(data));</pre>
+            </div>
+
+            <p><code>townWeather(위도, 경도)</code> 3일간의 날씨 데이터를 가져옵니다 (오늘, 내일, 내일모레)</p>
+
+            <p>좌표로 bcode 가져오기</p>
+
+            <div class="highlight highlight-source-js"><pre><span class="pl-k">let</span> kmaUtils <span
+                    class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span
+                    class="pl-pds">'</span>kma-js<span class="pl-pds">'</span></span>).<span class="pl-smi">Kma</span>;
+<span class="pl-smi">kmaUtils</span>.<span class="pl-en">convertBcode</span>(<span class="pl-s"><span
+                        class="pl-pds">'</span>37.49543016888596<span class="pl-pds">'</span></span>, <span
+                        class="pl-s"><span class="pl-pds">'</span>127.03781811461468<span class="pl-pds">'</span></span>)
+    .<span class="pl-en">then</span>(<span class="pl-smi">data</span> <span class="pl-k">=&gt;</span> <span
+                        class="pl-en">console</span>.<span class="pl-c1">log</span>(data));</pre>
+            </div>
+
+            <p><code>convertBcode(위도, 경도)</code> 현재 좌표를 가지고 kma에서 사용하는 bcode 를 가져옵니다</p>
+
+            <h2><a id="user-content-참고-자료" class="anchor" href="#참고-자료" aria-hidden="true">
+                <svg aria-hidden="true" class="octicon octicon-link" height="16" version="1.1" viewBox="0 0 16 16"
+                     width="16">
+                    <path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+                </svg>
+            </a>참고 자료
+            </h2>
+
+            <ul>
+                <li><a href="https://developers.google.com/maps/documentation/geolocation/intro">Google GeoLocation
+                    API</a></li>
+                <li><a href="http://www.kma.go.kr">Korea Meteorological Administration</a></li>
+            </ul>
+        </article>
+    </div>
+
 </div>
 
 <script type="text/javascript">
