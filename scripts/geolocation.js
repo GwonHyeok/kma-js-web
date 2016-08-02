@@ -5,11 +5,17 @@
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition, function (error) {
+            getSeoulWeather();
+        });
     } else {
         // GPS 정보를 사용할 수 없다면 서울 정보로 보여준다
-        showPosition(37.49543016888596, 127.03781811461468);
+        getSeoulWeather();
     }
+}
+
+function getSeoulWeather() {
+    getWeather(37.49543016888596, 127.03781811461468);
 }
 
 function showPosition(position) {
