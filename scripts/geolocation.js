@@ -45,6 +45,7 @@ function getWeather(latitude, longitude) {
             $('.weather-temp-low').text(nowWeatherInfo.temperature.min);
             $('.weather-temp-high').text(nowWeatherInfo.temperature.high);
             $('.weather-status').text(nowWeatherInfo.weather.value.ko);
+            $('.weather-temp').text(nowWeatherInfo.temperature.current);
 
             // 강수량
             $('#today-weather-rainfall').text(nowWeatherInfo.rain.expect['6'].rainfall || nowWeatherInfo.rain.expect['6'].snowfall);
