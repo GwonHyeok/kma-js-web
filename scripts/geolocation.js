@@ -3,16 +3,12 @@
  */
 
 
-(function () {
-    // 미리 데이터를 서울로 로드 해 놓는다
-    // getWeather(37.49543016888596, 127.03781811461468);
-})();
-
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        $('#latitude-longitude').text('Geolocation is not supported by this browser.')
+        // GPS 정보를 사용할 수 없다면 서울 정보로 보여준다
+        showPosition(37.49543016888596, 127.03781811461468);
     }
 }
 
