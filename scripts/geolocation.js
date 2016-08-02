@@ -27,7 +27,7 @@ function showPosition(position) {
 }
 
 function getWeather(latitude, longitude) {
-    var url = 'http://kmajs-ghyeok.rhcloud.com/weather' + '?latitude=' + latitude + '&longitude=' + longitude;
+    var url = 'https://kh4975.iptime.org/weather' + '?latitude=' + latitude + '&longitude=' + longitude;
     $.ajax({
         type: 'GET',
         url: url,
